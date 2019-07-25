@@ -1,20 +1,20 @@
 {
   "expo": {
-    "name": "UCD_RN_Performance",
+    "name": "UCD ASE React Native energy consumption test app",
     "slug": "UCD_RN_Performance",
     "privacy": "public",
     "sdkVersion": "33.0.0",
     "android": {
       "package": "com.miguelbragagomes.ucd_rn_performance",
       "permissions": [],
-      "versionCode": 2
+      "versionCode": 3
     },
     "platforms": [
       "ios",
       "android",
       "web"
     ],
-    "version": "2.0.0",
+    "version": "3.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
