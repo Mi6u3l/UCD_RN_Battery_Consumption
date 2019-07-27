@@ -4,17 +4,18 @@
     "slug": "UCD_RN_Performance",
     "privacy": "public",
     "sdkVersion": "33.0.0",
+    "icon": "./assets/icon.png",
     "android": {
       "package": "com.miguelbragagomes.ucd_rn_performance",
       "permissions": [],
-      "versionCode": 3
+      "versionCode": 6
     },
     "platforms": [
       "ios",
       "android",
       "web"
     ],
-    "version": "3.0.0",
+    "version": "6.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {

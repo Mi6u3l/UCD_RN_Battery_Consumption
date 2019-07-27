@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>UCD React Native Performance App</Text>
+      <Text>UCD ASE React Native energy consumption test app</Text>
     </View>
   );
 }
