@@ -7,15 +7,18 @@
     "icon": "./assets/icon.png",
     "android": {
       "package": "com.miguelbragagomes.ucd_rn_performance",
-      "permissions": [],
-      "versionCode": 6
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ],
+      "versionCode": 8
     },
     "platforms": [
       "ios",
       "android",
       "web"
     ],
-    "version": "6.0.0",
+    "version": "8.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
