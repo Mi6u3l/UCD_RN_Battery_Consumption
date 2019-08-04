@@ -11,19 +11,7 @@ export default class App extends Component {
   };
 
   startGPSTest = () => {
-    let intervals = 0;
-    let interval = setInterval(() => {
-      intervals++;
-      if (intervals < 1000) {
         this.getLocation();  
-      } else {
-        clearInterval(interval);
-        this.setState({
-          feedBackMessage: 'Test completed',
-        });
-      }
-      
-    }, 2000);
   }
 
   getLocation = () => {
@@ -64,6 +52,9 @@ export default class App extends Component {
         title="Start GPS test"
       />
       <View style={styles.container}>
+        <Text style={styles.paragraph}>{text}</Text>
+      </View>
+      <View>
         <Text style={styles.paragraph}>{text}</Text>
       </View>
     </View>

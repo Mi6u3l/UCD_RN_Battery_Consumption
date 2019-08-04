@@ -11,14 +11,14 @@
         "ACCESS_COARSE_LOCATION",
         "ACCESS_FINE_LOCATION"
       ],
-      "versionCode": 8
+      "versionCode": 9
     },
     "platforms": [
       "ios",
       "android",
       "web"
     ],
-    "version": "8.0.0",
+    "version": "9.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
