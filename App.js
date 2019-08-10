@@ -54,9 +54,6 @@ export default class App extends Component {
       <View style={styles.container}>
         <Text style={styles.paragraph}>{text}</Text>
       </View>
-      <View>
-        <Text style={styles.paragraph}>{text}</Text>
-      </View>
     </View>
 
     );
