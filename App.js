@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, Text, View, StyleSheet, Button } from 'react-native';
+import { Platform, Text, View, StyleSheet, Button, ToolbarAndroid } from 'react-native';
 import Constants from 'expo-constants';
 import * as Location from 'expo-location';
 import * as Permissions from 'expo-permissions';
@@ -41,15 +41,20 @@ export default class App extends Component {
     if (this.state.feedBackMessage) {
       text = this.state.feedBackMessage;
     } else if (this.state.location) {
-      text = JSON.stringify(this.state.location);
+      let latitude = parseFloat(this.state.location.coords.latitude);
+      let longitude = parseFloat(this.state.location.coords.longitude);
+      text = `Latitude ${latitude.toFixed(7)} Longitude: ${longitude.toFixed(7)}`;
     }
 
     return (
       <View style={styles.container}>
-        <Text>UCD ASE React Native energy consumption test app</Text>
-      <Button
+  <ToolbarAndroid
+            style={styles.toolbar}
+            title="UCD ASE React Native energy consumption test app"
+            />
+      <Button 
         onPress={this.startGPSTest}
-        title="Start GPS test"
+        title="Get Current Location"
       />
       <View style={styles.container}>
         <Text style={styles.paragraph}>{text}</Text>
@@ -70,7 +75,14 @@ const styles = StyleSheet.create({
   },
   paragraph: {
     margin: 24,
-    fontSize: 18,
+    fontSize: 16,
     textAlign: 'center',
   },
+   toolbar: {
+   backgroundColor: '#2196F3',
+   height: 56,
+   marginBottom: 10,
+   alignSelf: 'stretch',
+   textAlign: 'center',
+ },
 });

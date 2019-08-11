@@ -10,14 +10,14 @@
       "permissions": [
         "ACCESS_FINE_LOCATION"
       ],
-      "versionCode": 9
+      "versionCode": 10
     },
     "platforms": [
       "ios",
       "android",
       "web"
     ],
-    "version": "9.0.0",
+    "version": "10.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
