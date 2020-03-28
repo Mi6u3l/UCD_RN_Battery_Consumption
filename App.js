@@ -27,7 +27,7 @@ export default class App extends Component {
 
   toggleFlashLight = () => {
     Torch.switchState(true);
-  //  this.setState({ torchOn: !this.torchOn });
+    this.setState({ torchOn: !this.torchOn });
   };
 
   vibrate = () => {
