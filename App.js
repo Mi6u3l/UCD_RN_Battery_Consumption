@@ -13,6 +13,8 @@ import Constants from "expo-constants";
 import * as Location from "expo-location";
 import * as Permissions from "expo-permissions";
 import Torch from "react-native-torch";
+import * as Calendar from "expo-calendar";
+import * as Speech from "expo-speech";
 
 export default class App extends Component {
   state = {
@@ -66,6 +68,23 @@ export default class App extends Component {
     this.setState({ location });
   };
 
+  getCalendar = () => {
+    this._getCalendarAsync();
+  };
+
+  _getCalendarAsync = async () => {
+      const calendars = await Calendar.getCalendarsAsync();
+      this.setState({
+        feedBackMessage:
+          calendars[0].name
+      });
+  };
+
+  speak() {
+    var thingToSay = "UCD Advanced Software Engineering";
+    Speech.speak(thingToSay);
+  }
+
   render() {
     let text = "";
     if (this.state.feedBackMessage) {
@@ -106,6 +125,18 @@ export default class App extends Component {
         <Button
           onPress={this.playSound}
           title="Play sound"
+          className="button"
+        />
+        <Text style={styles.text}></Text>
+        <Button
+          onPress={this.getCalendar}
+          title="Get calendar"
+          className="button"
+        />
+        <Text style={styles.text}></Text>
+        <Button
+          onPress={this.speak}
+          title="Speak"
           className="button"
         />
         <View style={styles.container}>
