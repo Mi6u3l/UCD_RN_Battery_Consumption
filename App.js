@@ -73,11 +73,14 @@ export default class App extends Component {
   };
 
   _getCalendarAsync = async () => {
-      const calendars = await Calendar.getCalendarsAsync();
-      this.setState({
-        feedBackMessage:
-          calendars[0].name
-      });
+      const { status } = await Permissions.askAsync(Permissions.CALENDAR);
+      if (status === 'granted') {
+        const calendars = await Calendar.getCalendarsAsync();
+        this.setState({
+          feedBackMessage:
+          calendars[0].title
+        });
+    }
   };
 
   speak() {
