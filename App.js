@@ -84,8 +84,8 @@ export default class App extends Component {
   };
 
   speak() {
-    var thingToSay = "UCD Advanced Software Engineering";
-    Speech.speak(thingToSay);
+    var stringToSpeak = "UCD Advanced Software Engineering";
+    Speech.speak(stringToSpeak);
   }
 
   render() {
