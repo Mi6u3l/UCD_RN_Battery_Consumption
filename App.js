@@ -15,6 +15,8 @@ import * as Permissions from "expo-permissions";
 import Torch from "react-native-torch";
 import * as Calendar from "expo-calendar";
 import * as Speech from "expo-speech";
+import MessageQueue from
+"react-native/Libraries/BatchedBridge/MessageQueue";
 
 export default class App extends Component {
   state = {
@@ -24,6 +26,7 @@ export default class App extends Component {
   };
 
   startGPSTest = () => {
+    MessageQueue.spy(true);
     this.getLocation();
   };
 
