@@ -8,7 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "^33.0.0",
+    "expo": "^46.0.14",
     "expo-av": "^8.0.0",
     "expo-calendar": "~5.0.1",
     "expo-speech": "~5.0.2",
